@@ -1,4 +1,4 @@
-class Countdown {
+export class Countdown {
 
     get TIMESTAMP_SECOND() { return 1000; }
     get TIMESTAMP_MINUTE() { return 60 * this.TIMESTAMP_SECOND; }
@@ -84,7 +84,7 @@ class Countdown {
 
     /**
      * @param {Date|Object|String|Number} date
-     * 
+     *
      * @returns {Date}
      * @private
      */
@@ -126,7 +126,7 @@ class Countdown {
 
     /**
      * @param {Date} dateObj
-     * 
+     *
      * @return {{}}
      * @private
      */
@@ -191,7 +191,7 @@ class Countdown {
 
     /**
      * @param {{}} data
-     * @private 
+     * @private
      */
     _writeData(data) {
         let code = `<div class="${this.elementClassPrefix}cont">`,
@@ -219,11 +219,11 @@ class Countdown {
     }
 
     /**
-     * @param {Number} newDigit 
+     * @param {Number} newDigit
      * @param {Number} lastDigit
-     * 
+     *
      * @returns {String}
-     * @private 
+     * @private
      */
     _getDigitElementString(newDigit, lastDigit) {
         return `<div class="${this.elementClassPrefix}digit_last_placeholder">
@@ -244,7 +244,7 @@ class Countdown {
 
     /**
      * @param {{}} data
-     * @private 
+     * @private
      */
     _updateView(data) {
         for (let intervalName in data) {
@@ -262,9 +262,9 @@ class Countdown {
     }
 
     /**
-     * @param {String} intervalName 
+     * @param {String} intervalName
      * @param {String} index
-     * 
+     *
      * @returns {HTMLElement}
      * @private
      */
@@ -281,7 +281,7 @@ class Countdown {
 
     /**
      * @param {String} intervalName
-     * 
+     *
      * @returns {String}
      * @private
      */
@@ -299,7 +299,7 @@ class Countdown {
 
     /**
      * @param {String} index
-     * 
+     *
      * @returns {String}
      * @private
      */
