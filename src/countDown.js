@@ -59,6 +59,8 @@ export class Countdown {
 
         this.lastTick = dateData;
 
+        console.log('start')
+
         if (this.options.countdown && date.getTime() <= Date.now()) {
             if (typeof this.options.endCallback === 'function') {
                 this.stop();
