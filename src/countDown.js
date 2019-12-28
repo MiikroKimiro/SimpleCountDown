@@ -83,6 +83,8 @@ export class Countdown {
     }
 
     _checkEnd() {
+      let date = this._getDate(this.options.date);
+
       if (this.options.countdown && date.getTime() <= Date.now()) {
         if (typeof this.options.endCallback === 'function') {
           this.stop();
