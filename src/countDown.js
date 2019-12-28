@@ -59,8 +59,6 @@ export class Countdown {
 
         this.lastTick = dateData;
 
-        console.log('start')
-
         if (this.options.countdown && date.getTime() <= Date.now()) {
             if (typeof this.options.endCallback === 'function') {
                 this.stop();
@@ -82,6 +80,15 @@ export class Countdown {
         if (this.interval !== null) {
             clearInterval(this.interval);
         }
+    }
+
+    _checkEnd() {
+      if (this.options.countdown && date.getTime() <= Date.now()) {
+        if (typeof this.options.endCallback === 'function') {
+          this.stop();
+          this.options.endCallback();
+        }
+      }
     }
 
     /**
@@ -259,7 +266,7 @@ export class Countdown {
                 });
             }
         }
-        console.log('update')
+        this._checkEnd();
         this.lastTick = data;
     }
 
