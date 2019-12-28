@@ -19,7 +19,8 @@
     "url": "https://github.com/MiikroKimiro/SimpleCountDown/issues"
   },
   "files": [
-    "src"
+    "src",
+    "dist"
   ],
   "homepage": "https://github.com/MiikroKimiro/SimpleCountDown#readme",
   "devDependencies": {
