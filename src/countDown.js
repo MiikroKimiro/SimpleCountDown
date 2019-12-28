@@ -259,7 +259,7 @@ export class Countdown {
                 });
             }
         }
-
+        console.log('update')
         this.lastTick = data;
     }
 
